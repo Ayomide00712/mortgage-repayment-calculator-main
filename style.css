@@ -24,7 +24,7 @@ body {
   width: 50%;
   background-color: #fff;
 }
-.result-section {
+.results-section {
   padding: 30px;
   width: 50%;
   background-color: #1a3c34;
@@ -57,14 +57,17 @@ label {
 }
 .input-wrapper {
   position: relative;
+  width: 100%;
+  display: inline-block;
 }
 input[type="number"] {
   width: 100%;
   padding: 10px;
-  padding-left: 40px;
+  padding-left: 50px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  
 }
 .currency,
 .unit {
@@ -73,115 +76,134 @@ input[type="number"] {
   transform: translateY(-50%);
   font-size: 16px;
   color: #1a3c34;
+  background-color: hsl(203, 41%, 72%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
 }
 .currency {
-  left: 10px;
+    
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .unit {
-  right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: 0;
+}
+#year{
+    /* padding: 0 20px; */
+    width: 60px;
 }
 .form-row {
   display: flex;
   gap: 20px;
 }
 .form-row .form-group {
-    flex: 1;
-  }
-  .result-section{
-    border-bottom-left-radius: 100px;
-  }
-  .radio-group{
-    display: flex;
+  flex: 1;
+}
+.results-section {
+  border-bottom-left-radius: 100px;
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid hsl(200, 24%, 40%);
+}
+.radio-label input {
+  margin-right: 10px;
+}
+.radio-label:has(input:checked) {
+  background-color: #fff3cd;
+  border-color: hsl(61, 70%, 52%);
+}
+.ri-calculator-line {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.calculate-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: hsl(61, 70%, 52%);
+  border: none;
+  border-radius: 25px;
+  color: #1a3c34;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.results-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+  color: #fff;
+}
+.results-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.results-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: hsl(200, 26%, 54%);
+}
+
+.results-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #0a1f1b;
+  border-radius: 10px;
+  border-top: 2px solid hsl(61, 70%, 52%);
+}
+
+.results-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.results-box p {
+  font-size: 32px;
+  color: hsl(61, 70%, 52%);
+}
+
+.results-box hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.attribution {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.attribution a {
+  color: #1a3c34;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    gap: 10px;
   }
-  .radio-label{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid hsl(200, 24%, 40%);
-  }
-  .radio-label input{
-    margin-right: 10px;
-  }
-  .radio-label:has(input:checked){
-    background-color: #fff3cd;
-    border-color: hsl(61, 70%, 52%);
-  }
-  .ri-calculator-line{
-    font-size: 16px;
-    margin-right: 8px;
-  }
-  .calculate-btn {
+
+  .form-section,
+  .results-section {
     width: 100%;
-    padding: 15px;
-    background-color: hsl(61, 70%, 52%);
-    border: none;
-    border-radius: 25px;
-    color: #1a3c34;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
   }
-  .results-content{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
+  .results-section {
+    border-bottom-left-radius: 0;
   }
-  .results-content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .results-content p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: hsl(200, 26%, 54%) ;
-  }
-  
-  .results-box {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #0a1f1b;
-    border-radius: 10px;
-    border-top: 2px solid hsl(61, 70%, 52%);
-  }
-  
-  .results-box h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .results-box p {
-    font-size: 32px;
-    color: hsl(61, 70%, 52%);
-  }
-  
-  .results-box hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
-  .attribution {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 12px;
-  }
-  
-  .attribution a {
-    color: #1a3c34;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .form-section, .results-section {
-      width: 100%;
-    }
-  }
+}
