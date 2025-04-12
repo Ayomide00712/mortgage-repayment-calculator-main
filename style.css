@@ -87,6 +87,9 @@ input[type="number"] {
 .form-row .form-group {
     flex: 1;
   }
+  .result-section{
+    border-bottom-left-radius: 100px;
+  }
   .radio-group{
     display: flex;
     flex-direction: column;
@@ -124,6 +127,8 @@ input[type="number"] {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    color: #fff;
   }
   .results-content h2 {
     font-size: 24px;
@@ -133,6 +138,7 @@ input[type="number"] {
   .results-content p {
     font-size: 14px;
     line-height: 1.5;
+    color: hsl(200, 26%, 54%) ;
   }
   
   .results-box {
@@ -140,6 +146,7 @@ input[type="number"] {
     padding: 20px;
     background-color: #0a1f1b;
     border-radius: 10px;
+    border-top: 2px solid hsl(61, 70%, 52%);
   }
   
   .results-box h3 {
@@ -149,7 +156,7 @@ input[type="number"] {
   
   .results-box p {
     font-size: 32px;
-    color: #ffca28;
+    color: hsl(61, 70%, 52%);
   }
   
   .results-box hr {
